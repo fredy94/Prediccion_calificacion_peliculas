@@ -119,7 +119,10 @@ with st.sidebar:
     votos = st.number_input("Número de votos IMDb", min_value=0, value=1000)
 
     st.subheader("Categorías")
-    generos = st.multiselect("Géneros", ["Action", "Adventure", "Drama", "Comedy", "Animation"])
+    generos = st.multiselect("Géneros", ["Romance","Crime","War","Comedy","Drama","Western",
+    "Adventure","Animation","Mystery","Family","Thriller","Action","Musical","History","Fantasy",
+    "Biography","TV Movie","Sci-Fi","Music","Sport","Horror","News","Documentary","Game-Show",
+    "Reality-TV","Talk-Show","Short"])
     idioma = st.text_input("Idioma original", "English")
     pais = st.text_input("País", "USA")
     productora = st.text_input("Productora", "Warner Bros")
