@@ -7,4 +7,5 @@ __pycache__/
 .ipynb_checkpoints/
 *.pkl
 !scaler.pkl
+!y_range.pkl
 
