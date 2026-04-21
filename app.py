@@ -31,6 +31,21 @@ def cargar_datos():
 
 personas_dict = cargar_datos()
 
+
+
+st.write("Columnas modelo:", len(columnas_modelo))
+st.write("Columnas input:", df_input.shape[1])
+
+cols_input = set(df_input.columns)
+cols_modelo = set(columnas_modelo)
+
+extra = cols_input - cols_modelo
+faltantes = cols_modelo - cols_input
+
+st.write("Columnas extra:", extra)
+st.write("Columnas faltantes:", faltantes)
+
+
 # ------------------- FUNCIONES -------------------
 
 def preparar_input_desde_nombres(input_usuario, columnas_modelo, personas_dict):
@@ -82,6 +97,7 @@ def alinear_columnas_para_modelo(df_input, columnas_modelo):
     for col in columnas_modelo:
         if col not in df_input:
             df_input[col] = 0
+    df_input = df_input[columnas_modelo]
     return df_input[columnas_modelo]
 
 
