@@ -1,0 +1,112 @@
+0
+start_Year
+runtime_Minutes
+Presupuesto
+Ingresos
+popularity_tmdb
+Número_de_votos_imdb
+Other_Nominaciones
+Other_Win
+Ganador_OSCARS
+Nominaciones_OSCARS
+Hit Ratio oscar
+Score Ponderado 
+Score log
+genero_Action
+genero_Adult
+genero_Adventure
+genero_Animation
+genero_Biography
+genero_Comedy
+genero_Crime
+genero_Documentary
+genero_Drama
+genero_Family
+genero_Fantasy
+genero_Game-Show
+genero_History
+genero_Horror
+genero_Music
+genero_Musical
+genero_Mystery
+genero_News
+genero_Reality-TV
+genero_Romance
+genero_Science Fiction
+genero_Short
+genero_Sport
+genero_TV Movie
+genero_Talk-Show
+genero_Thriller
+genero_War
+genero_Western
+genero_documentary
+productora_20th Century Fox
+productora_ARTE
+productora_Canal+
+productora_Columbia Pictures
+productora_Filmové studio Barrandov
+productora_Metro-Goldwyn-Mayer
+productora_Mosfilm
+productora_Nikkatsu Corporation
+productora_Paramount Pictures
+productora_TOHO
+productora_Toei Company
+productora_Universal Pictures
+productora_Warner Bros. Pictures
+productora_ZDF
+productora_otros_productora
+idioma_english
+idioma_french
+idioma_german
+idioma_hindi
+idioma_italian
+idioma_japanese
+idioma_mandarin
+idioma_otros_idioma
+idioma_portuguese
+idioma_russian
+idioma_spanish
+pais_canada
+pais_france
+pais_germany
+pais_india
+pais_italy
+pais_japan
+pais_mexico
+pais_otros_pais
+pais_spain
+pais_united kingdom
+pais_united states
+Total_Wins_Extraidos
+Total_Nominations_Extraidos
+actor_score_mean
+actor_score_max
+actor_score_std
+actor_ganador_oscar_prom
+actor_nominado_oscar_prom
+actriz_score_mean
+actriz_score_max
+actriz_score_std
+actriz_ganador_oscar_prom
+actriz_nominado_oscar_prom
+director_score_mean
+director_score_max
+director_score_std
+director_ganador_oscar_prom
+director_nominado_oscar_prom
+escritor_score_mean
+escritor_score_max
+escritor_score_std
+escritor_ganador_oscar_prom
+escritor_nominado_oscar_prom
+productor_score_mean
+productor_score_max
+productor_score_std
+productor_ganador_oscar_prom
+productor_nominado_oscar_prom
+tiene_actor
+tiene_actriz
+tiene_director
+tiene_escritor
+tiene_productor
