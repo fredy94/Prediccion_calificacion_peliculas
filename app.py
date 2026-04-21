@@ -19,37 +19,17 @@ with open("y_range.pkl", "rb") as f:
     y_range = pickle.load(f)
     y_min, y_max = y_range["y_min"], y_range["y_max"]
 
-import gdown
-import os
-
-# ---------------- DESCARGA ----------------
-def descargar_drive(nombre_archivo, file_id):
-    if not os.path.exists(nombre_archivo):
-        url = f"https://drive.google.com/uc?id={file_id}"
-        with st.spinner(f"Descargando {nombre_archivo}..."):
-            gdown.download(url, nombre_archivo, quiet=False)
-
-# ---------------- CACHE DE CARGA ----------------
 @st.cache_data
 def cargar_datos():
     return {
-        "actor": pd.read_pickle("df_actor_stats.pkl"),
-        "actriz": pd.read_pickle("df_actriz_stats.pkl"),
-        "director": pd.read_pickle("df_director_stats.pkl"),
-        "escritor": pd.read_pickle("df_escritor_stats.pkl"),
-        "productor": pd.read_pickle("df_productor_stats.pkl")
+        "actor": pd.read_csv("df_actor_stats.csv"),
+        "actriz": pd.read_csv("df_actriz_stats.csv"),
+        "director": pd.read_csv("df_director_stats.csv"),
+        "escritor": pd.read_csv("df_escritor_stats.csv"),
+        "productor": pd.read_csv("df_productor_stats.csv")
     }
 
-# ---------------- DESCARGAR ARCHIVOS ----------------
-descargar_drive("df_actor_stats.pkl", "1Nrg7IWVX2B9NgB1LtkomwUAroZh0V69_")
-descargar_drive("df_actriz_stats.pkl", "1MVdolpDaaPwzqloAgTvwYAO-CI8IaKjI")
-descargar_drive("df_director_stats.pkl", "1XHs29DGjv4eUZ9rSZRXDGOOq4lWn-Mxj")
-descargar_drive("df_escritor_stats.pkl", "13rLPR9gpwoPbQKNWMshQ3AM5ZRgs6CYs")
-descargar_drive("df_productor_stats.pkl", "1xjc9HduiKGNc2F0TKW4GIRedRhQhyWPP")
-
-
 personas_dict = cargar_datos()
-
 
 # ------------------- FUNCIONES -------------------
 
