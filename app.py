@@ -33,19 +33,6 @@ personas_dict = cargar_datos()
 
 
 
-st.write("Columnas modelo:", len(columnas_modelo))
-st.write("Columnas input:", df_input.shape[1])
-
-cols_input = set(df_input.columns)
-cols_modelo = set(columnas_modelo)
-
-extra = cols_input - cols_modelo
-faltantes = cols_modelo - cols_input
-
-st.write("Columnas extra:", extra)
-st.write("Columnas faltantes:", faltantes)
-
-
 # ------------------- FUNCIONES -------------------
 
 def preparar_input_desde_nombres(input_usuario, columnas_modelo, personas_dict):
@@ -103,6 +90,19 @@ def alinear_columnas_para_modelo(df_input, columnas_modelo):
 
 def predecir_calificacion_pelicula(input_usuario, columnas_modelo, personas_dict, scaler, modelo, y_min=None, y_max=None):
     df_input = preparar_input_desde_nombres(input_usuario, columnas_modelo, personas_dict)
+    
+    st.write("Columnas modelo:", len(columnas_modelo))
+    st.write("Columnas input:", df_input.shape[1])
+
+    cols_input = set(df_input.columns)
+    cols_modelo = set(columnas_modelo)
+
+    extra = cols_input - cols_modelo
+    faltantes = cols_modelo - cols_input
+
+    st.write("Columnas extra:", extra)
+    st.write("Columnas faltantes:", faltantes)
+    
     df_input = alinear_columnas_para_modelo(df_input, columnas_modelo)
 
     df_input_scaled = df_input.copy()
